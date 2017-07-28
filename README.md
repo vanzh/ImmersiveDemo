@@ -21,3 +21,5 @@ android:fitsSystemWindows="true"
 ```
 tvTitle.setPadding(0, tvTitle.getPaddingTop() + statusHeight, 0, 0);
 ```
+
+ps:再提供一种方法，同样的思路还可以布局文件中标题栏前添加一个0.1dp高的View,然后动态设置View为状态栏高度，再设置此View的背景色达到与标题栏一致的颜色；
