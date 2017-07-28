@@ -43,7 +43,7 @@ public class ImmersiveUitls {
      * @param context
      * @return
      */
-    public static int getStatusHeight(Context context) {
+    private static int getStatusHeight(Context context) {
         int statusHeight = -1;
 
         try {
@@ -62,15 +62,5 @@ public class ImmersiveUitls {
             e.printStackTrace();
         }
         return statusHeight;
-    }
-
-
-    public static int px2dp(Context context, float pxValue) {
-        return (int) (pxValue / context.getResources().getDisplayMetrics().density + 0.5f);
-    }
-
-
-    public static int dp2px(Context context, float dipValue) {
-        return (int) (dipValue * context.getResources().getDisplayMetrics().density + 0.5f);
     }
 }
