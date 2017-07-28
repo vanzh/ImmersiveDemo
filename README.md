@@ -11,12 +11,13 @@
 getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 ```
 ## 3、将标题View设置paddingTop，其paddingTop值相等于状态栏高度；
-可通过以下方法设置
+两种设置paddingTop的方法
+- 布局文件中，在标题栏添加
 ```
 android:clipToPadding="true"
 android:fitsSystemWindows="true"
 ```
-在Java中设置，找到标题View,
+- Java代码中，找到标题View,设置paddingTop
 ```
 tvTitle.setPadding(0, tvTitle.getPaddingTop() + statusHeight, 0, 0);
 ```
