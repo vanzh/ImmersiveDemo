@@ -13,16 +13,17 @@ import android.view.WindowManager;
 public class ImmersiveUitls {
 
     public static void setContentView(Activity activity, int resId) {
-      //  if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
-        if (Build.VERSION.SDK_INT >= 19 ) {
+        //  if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+        if (Build.VERSION.SDK_INT >= 19) {
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
         activity.setContentView(resId);
     }
 
     public static void immerView(Context context, View view) {
-        view.setPadding(0, view.getPaddingTop() + getStatusHeight(context), 0, 0);
+        int statusHeight = getStatusHeight(context);
+        view.setPadding(0, view.getPaddingTop() + statusHeight, 0, 0);
+        view.getLayoutParams().height = view.getLayoutParams().height + statusHeight;
     }
 
     public static void setStatusBarColor(Activity activity, int statusBarColor) {
