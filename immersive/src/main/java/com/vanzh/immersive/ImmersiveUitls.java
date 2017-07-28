@@ -21,8 +21,8 @@ public class ImmersiveUitls {
         activity.setContentView(resId);
     }
 
-    public static void immerView(Activity activity, View view) {
-        view.setPadding(0, view.getPaddingTop() + getStatusHeight(activity), 0, 0);
+    public static void immerView(Context context, View view) {
+        view.setPadding(0, view.getPaddingTop() + getStatusHeight(context), 0, 0);
     }
 
     public static void setStatusBarColor(Activity activity, int statusBarColor) {
